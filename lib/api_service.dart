@@ -41,7 +41,7 @@ class Answer {
 }
 
 Future<List<Question>> fetchQuestions() async {
-  final response = await http.get(Uri.parse('http://localhost:8000/questions'));
+  final response = await http.get(Uri.parse('https://quiz-go-backend.onrender.com/questions'));
 
   if (response.statusCode == 200) {
     List jsonResponse = json.decode(response.body);
